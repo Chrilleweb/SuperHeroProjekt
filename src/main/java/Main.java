@@ -4,8 +4,7 @@ public class Main {
 
     Database database = new Database();
 
-    public static void main(String[] args){
-
+    public void indtastSuperHelt(){
         Superhero[] superheroes = {};
 
 
@@ -30,8 +29,17 @@ public class Main {
 
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMennekse, superhelteStyrke);
 
-        System.out.println();
 
+        System.out.println(superhero.toString());
+    }
+
+    public void start(){
+        indtastSuperHelt();
+    }
+
+    public static void main(String[] args){
+        Main program = new Main();
+        program.start();
 
     }
 }

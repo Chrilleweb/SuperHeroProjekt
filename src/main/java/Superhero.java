@@ -16,6 +16,14 @@ public class Superhero {
         this.superHelteStyrke = superHelteStyrke;
     }
 
+    public Superhero(String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, boolean erMenneske, double superHelteStyrke){
+        this.superKraft = superKraft;
+        this.superHeltensRigtigeNavn = superHeltensRigtigeNavn;
+        this.oprindelsesOr = oprindelsesOr;
+        this.erMenneske = erMenneske;
+        this.superHelteStyrke = superHelteStyrke;
+    }
+
 
 
     public String getSuperHeltNavn(){
@@ -43,7 +51,7 @@ public class Superhero {
     }
 
     public String toString(){
-        return getSuperHeltNavn() + getSuperKraft() + getSuperHeltensRigtigeNavn() + getOprindelsesOr() + getErMenneske() + getSuperHelteStyrke();
+        return "Superheltenavn: " + getSuperHeltNavn() + "\n" + "Superkraft: " + getSuperKraft() + "\n" + "Virkeligt navn: " +  getSuperHeltensRigtigeNavn() + "\n" + "Oprindelsesår: " + getOprindelsesOr() + "\n" + "Er menneske: " + getErMenneske() + "\n" + "Styrke: " + getSuperHelteStyrke();
     }
 
 }
