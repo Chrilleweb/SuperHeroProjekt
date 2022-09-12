@@ -7,9 +7,20 @@ public class Main {
     public void indtastSuperHelt() {
         System.out.println("Velkommen til programmet!");
         System.out.println("-------------------------");
-
-
+        System.out.println("1. Opret superhelt");
+        System.out.println("2. Afslut");
         Scanner scan = new Scanner(System.in);
+        int opretEllerAfslut = scan.nextInt();
+            if (opretEllerAfslut == 2) {
+                System.out.println("Du har Afsluttet programmet");
+                System.exit(0);
+            }
+
+
+
+
+
+
         System.out.println("Indtast superheltenavn");
         String superHeltNavn = scan.next();
         System.out.println("Indtast Superkraft");
@@ -31,6 +42,7 @@ public class Main {
 
         System.out.println(superhero.toString());
     }
+
 
     public void start() {
         indtastSuperHelt();
