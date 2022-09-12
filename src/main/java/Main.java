@@ -1,7 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
+
+    Database database = new Database();
+
     public static void main(String[] args){
+
+        Superhero[] superheroes = {};
+
+
         System.out.println("Velkommen til programmet!");
         System.out.println("-------------------------");
 
@@ -16,9 +23,14 @@ public class Main {
         System.out.println("Indtast oprindelsesår");
         int oprindelsesOr = scan.nextInt();
         System.out.println("er din superhelt et menneske? (JA/NEJ)");
-        boolean erMennekse = scan.hasNext();
+        boolean erMennekse = scan.nextBoolean();
         System.out.println("Indtast superheltens styrke");
         double superhelteStyrke = scan.nextDouble();
+
+
+        Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMennekse, superhelteStyrke);
+
+        System.out.println();
 
 
     }
