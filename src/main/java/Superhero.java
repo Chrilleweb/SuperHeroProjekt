@@ -4,10 +4,10 @@ public class Superhero {
     private String superHeltensRigtigeNavn;
     private int oprindelsesOr;
     private boolean erMenneske;
-    private double superHelteStyrke;
+    private int superHelteStyrke;
 
 
-    public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, boolean erMenneske, double superHelteStyrke){
+    public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, boolean erMenneske, int superHelteStyrke){
         this.superHeltNavn = superHeltNavn;
         this.superKraft = superKraft;
         this.superHeltensRigtigeNavn = superHeltensRigtigeNavn;
@@ -16,7 +16,7 @@ public class Superhero {
         this.superHelteStyrke = superHelteStyrke;
     }
 
-    public Superhero(String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, boolean erMenneske, double superHelteStyrke){
+    public Superhero(String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, boolean erMenneske, int superHelteStyrke){
         this.superKraft = superKraft;
         this.superHeltensRigtigeNavn = superHeltensRigtigeNavn;
         this.oprindelsesOr = oprindelsesOr;
@@ -45,6 +45,7 @@ public class Superhero {
     public boolean getErMenneske() {
         return erMenneske;
     }
+
 
     public double getSuperHelteStyrke() {
         return superHelteStyrke;

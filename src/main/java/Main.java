@@ -21,13 +21,17 @@ public class Main {
         String superHeltensRigtigeNavn = scan.next();
         System.out.println("Indtast oprindelsesår");
         int oprindelsesOr = scan.nextInt();
-        System.out.println("er din superhelt et menneske? (JA/NEJ)");
-        boolean erMennekse = scan.nextBoolean();
+
+
+        System.out.println("er din superhelt et menneske? (TRUE/FALSE)");
+        boolean erMenneske = scan.nextBoolean();
+
+
         System.out.println("Indtast superheltens styrke");
-        double superhelteStyrke = scan.nextDouble();
+        int superhelteStyrke = scan.nextInt();
 
 
-        Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMennekse, superhelteStyrke);
+        Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superhelteStyrke);
 
 
         System.out.println(superhero.toString());
