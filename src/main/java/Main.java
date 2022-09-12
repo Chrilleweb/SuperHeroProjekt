@@ -18,8 +18,12 @@ public class Main {
         String superHeltensRigtigeNavn = scan.next();
         System.out.println("Indtast oprindelsesår");
         int oprindelsesOr = scan.nextInt();
-        System.out.println("er din superhelt et menneske? (TRUE/FALSE)");
-        boolean erMenneske = scan.nextBoolean();
+
+
+        System.out.println("er din superhelt et menneske? (JA/NEJ)");
+        String erMenneske = scan.next();
+
+
         System.out.println("Indtast superheltens styrke");
         int superhelteStyrke = scan.nextInt();
 
