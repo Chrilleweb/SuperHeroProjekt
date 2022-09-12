@@ -5,6 +5,7 @@ public class Superhero {
     private int oprindelsesOr;
     private String erMenneske;
     private int superHelteStyrke;
+    private int opretEllerAfslut;
 
 
     public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke){
@@ -45,7 +46,6 @@ public class Superhero {
     public String getErMenneske() {
        return erMenneske;
     }
-
 
 
     public double getSuperHelteStyrke() {
