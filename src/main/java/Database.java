@@ -13,6 +13,7 @@ public class Database {
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
         superheroes[antalSuperHeros++] = superhero;
         superheroes[antalSuperHeros++] = superhero;
+        System.out.println(superhero);
     }
 
     public int getSuperherosAmount() {
@@ -22,4 +23,5 @@ public class Database {
     public int getAntalSuperHeros(){
         return antalSuperHeros;
     }
+
 }

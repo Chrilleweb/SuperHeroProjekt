@@ -7,12 +7,14 @@ public class Main {
     public void indtastSuperHelt() {
         System.out.println("Velkommen til programmet!");
         System.out.println("-------------------------");
+        Scanner scan = new Scanner(System.in);
+        int opretEllerAfslut;
+        do {
+
         System.out.println("1. Opret superhelt");
         System.out.println("2. Afslut");
+        opretEllerAfslut = scan.nextInt();
 
-
-        Scanner scan = new Scanner(System.in);
-        int opretEllerAfslut = scan.nextInt();
             if (opretEllerAfslut == 2) {
                 System.out.println("Du har Afsluttet programmet");
                 System.exit(0);
@@ -39,6 +41,7 @@ public class Main {
         database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
 
         System.out.println();
+        } while (opretEllerAfslut == 1);
     }
 
 

@@ -17,19 +17,6 @@ public class Superhero {
         this.superHelteStyrke = superHelteStyrke;
     }
 
-    public Superhero(String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke){
-        this.superKraft = superKraft;
-        this.superHeltensRigtigeNavn = superHeltensRigtigeNavn;
-        this.oprindelsesOr = oprindelsesOr;
-        this.erMenneske = erMenneske;
-        this.superHelteStyrke = superHelteStyrke;
-    }
-
-   //public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke) {
-    //}
-
-
-
     public String getSuperHeltNavn(){
         return superHeltNavn;
     }
