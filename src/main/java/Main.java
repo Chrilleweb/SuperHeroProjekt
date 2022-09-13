@@ -41,9 +41,8 @@ public class Main {
         database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
 
         System.out.println();
-        } while (opretEllerAfslut == 1);
+        } while (opretEllerAfslut != 2);
     }
-
 
     public void start() {
         indtastSuperHelt();
