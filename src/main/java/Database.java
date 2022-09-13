@@ -1,17 +1,18 @@
+import java.util.ArrayList;
+
 public class Database {
-    private Superhero[] superheroes;
+    ArrayList<String> superheroes = new ArrayList<String>();
     private int antalSuperHeros;
 
 
     public Database() {
-        superheroes = new Superhero[5];
-        antalSuperHeros = 0;
+        ArrayList<String> superheroes = new ArrayList<String>();
+        antalSuperHeros = 1;
     }
     public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
-        superheroes[antalSuperHeros++] = superhero;
         System.out.println(superhero);
-        System.out.println("Antal superhelte: " + antalSuperHeros);
+        System.out.println("Antal superhelte: " + antalSuperHeros++);
     }
 
     public int getAntalSuperHeros(){
