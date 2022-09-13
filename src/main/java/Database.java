@@ -11,7 +11,7 @@ public class Database {
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
         superheroes[antalSuperHeros++] = superhero;
         System.out.println(superhero);
-        System.out.println(antalSuperHeros);
+        System.out.println("Antal superhelte: " + antalSuperHeros);
     }
 
     public int getAntalSuperHeros(){

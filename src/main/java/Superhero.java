@@ -43,7 +43,7 @@ public class Superhero {
     }
 
     public String toString(){
-        return "Superheltenavn: " + getSuperHeltNavn() + "\n" + "Superkraft: " + getSuperKraft() + "\n" + "Virkeligt navn: " +  getSuperHeltensRigtigeNavn() + "\n" + "Oprindelsesår: " + getOprindelsesOr() + "\n" + "Er menneske: " + getErMenneske() + "\n" + "Styrke: " + getSuperHelteStyrke();
+        return "Superheltenavn: " + getSuperHeltNavn() + "\nSuperkraft: " + getSuperKraft() + "\nVirkeligt navn: " +  getSuperHeltensRigtigeNavn() + "\nOprindelsesår: " + getOprindelsesOr() + "\nEr menneske: " + getErMenneske() + "\nStyrke: " + getSuperHelteStyrke();
     }
 
 }
