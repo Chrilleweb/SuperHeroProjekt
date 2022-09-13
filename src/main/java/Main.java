@@ -9,40 +9,50 @@ public class Main {
         System.out.println("-------------------------");
         Scanner scan = new Scanner(System.in);
         int opretEllerAfslut;
+        String superHeltNavn = "No name";
+        String superKraft = "No power";
+        String superHeltensRigtigeNavn = "No real name";
+        int oprindelsesOr = 0;
+        String erMenneske = "NEJ";
+        double superHelteStyrke = 0;
         do {
 
         System.out.println("1. Opret superhelt");
         System.out.println("2. Afslut");
+        System.out.println("3. Se liste af superhelte");
         opretEllerAfslut = scan.nextInt();
         scan.nextLine();
 
             if (opretEllerAfslut == 2) {
                 System.out.println("Du har Afsluttet programmet");
                 System.exit(0);
+            } if (opretEllerAfslut == 3){
+                System.out.println("Liste af superhelte:");
+                 database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
+                System.out.println(System.lineSeparator());
+                 continue;
             }
 
 
         System.out.println("Indtast superheltenavn");
-        String superHeltNavn = scan.nextLine();
+        superHeltNavn = scan.nextLine();
         System.out.println("Indtast Superkraft");
-        String superKraft = scan.nextLine();
+         superKraft = scan.nextLine();
         System.out.println("Indtast superheltens rigtige navn");
-        String superHeltensRigtigeNavn = scan.nextLine();
+         superHeltensRigtigeNavn = scan.nextLine();
         System.out.println("Indtast oprindelsesår");
-        int oprindelsesOr = scan.nextInt();
+         oprindelsesOr = scan.nextInt();
         scan.nextLine();
 
 
         System.out.println("er din superhelt et menneske? (JA/NEJ)");
-        String erMenneske = scan.nextLine();
+         erMenneske = scan.nextLine();
 
 
         System.out.println("Indtast superheltens styrke");
-        double superHelteStyrke = scan.nextDouble();
+         superHelteStyrke = scan.nextDouble();
 
-        database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
 
-        System.out.println();
         } while (opretEllerAfslut != 2);
     }
 

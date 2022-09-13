@@ -17,6 +17,15 @@ public class Superhero {
         this.superHelteStyrke = superHelteStyrke;
     }
 
+    public Superhero(){
+        this.superHeltNavn = "noname";
+        this.superKraft = "noname";
+        this.superHeltensRigtigeNavn = "noname";
+        this.oprindelsesOr = 0;
+        this.erMenneske = "noname";
+        this.superHelteStyrke = 0;
+    }
+
     public String getSuperHeltNavn(){
         return superHeltNavn;
     }

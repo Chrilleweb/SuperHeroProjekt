@@ -19,4 +19,9 @@ public class Database {
         return antalSuperHeros;
     }
 
+    public ArrayList<String> getSuperheros(){
+        return superheroes;
+    }
+
+
 }
