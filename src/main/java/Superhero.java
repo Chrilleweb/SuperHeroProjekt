@@ -4,11 +4,11 @@ public class Superhero {
     private String superHeltensRigtigeNavn;
     private int oprindelsesOr;
     private String erMenneske;
-    private int superHelteStyrke;
+    private double superHelteStyrke;
     private int opretEllerAfslut;
 
 
-    public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke){
+    public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
         this.superHeltNavn = superHeltNavn;
         this.superKraft = superKraft;
         this.superHeltensRigtigeNavn = superHeltensRigtigeNavn;

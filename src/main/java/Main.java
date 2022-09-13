@@ -14,6 +14,7 @@ public class Main {
         System.out.println("1. Opret superhelt");
         System.out.println("2. Afslut");
         opretEllerAfslut = scan.nextInt();
+        scan.nextLine();
 
             if (opretEllerAfslut == 2) {
                 System.out.println("Du har Afsluttet programmet");
@@ -22,21 +23,22 @@ public class Main {
 
 
         System.out.println("Indtast superheltenavn");
-        String superHeltNavn = scan.next();
+        String superHeltNavn = scan.nextLine();
         System.out.println("Indtast Superkraft");
-        String superKraft = scan.next();
+        String superKraft = scan.nextLine();
         System.out.println("Indtast superheltens rigtige navn");
-        String superHeltensRigtigeNavn = scan.next();
+        String superHeltensRigtigeNavn = scan.nextLine();
         System.out.println("Indtast oprindelsesår");
         int oprindelsesOr = scan.nextInt();
+        scan.nextLine();
 
 
         System.out.println("er din superhelt et menneske? (JA/NEJ)");
-        String erMenneske = scan.next();
+        String erMenneske = scan.nextLine();
 
 
         System.out.println("Indtast superheltens styrke");
-        int superHelteStyrke = scan.nextInt();
+        double superHelteStyrke = scan.nextDouble();
 
         database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
 

@@ -7,7 +7,7 @@ public class Database {
         superheroes = new Superhero[5];
         antalSuperHeros = 0;
     }
-    public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke){
+    public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
         superheroes[antalSuperHeros++] = superhero;
         System.out.println(superhero);
