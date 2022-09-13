@@ -25,6 +25,9 @@ public class Superhero {
         this.superHelteStyrke = superHelteStyrke;
     }
 
+   //public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke) {
+    //}
+
 
 
     public String getSuperHeltNavn(){

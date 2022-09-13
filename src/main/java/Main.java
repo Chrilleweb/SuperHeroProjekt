@@ -34,11 +34,11 @@ public class Main {
 
 
         System.out.println("Indtast superheltens styrke");
-        int superhelteStyrke = scan.nextInt();
+        int superHelteStyrke = scan.nextInt();
 
-        Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superhelteStyrke);
+        database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
 
-        System.out.println(superhero.toString());
+        System.out.println();
     }
 
 

@@ -1,23 +1,25 @@
 public class Database {
     private Superhero[] superheroes;
+    private int antalSuperHeros;
+    private int superherosAmount;
 
 
     public Database() {
-
-        Superhero superHeltNavn = new Superhero("d", "Klatre på vægge", "christian", 2000, "d", 2);
-        Superhero superhelt2 = new Superhero("Spiderman", "Klatre på vægge", "christian", 2000, "d", 2);
-        Superhero superhelt3 = new Superhero("Spiderman", "Klatre på vægge", "christian", 2000, "d", 2);
-        Superhero superhelt4 = new Superhero("Spiderman", "Klatre på vægge", "christian", 2000, "d", 2);
-        Superhero superhelt5 = new Superhero("spiderman", "Klatre på vægge", "christian", 2000, "d", 2);
-
-        this.superheroes = new Superhero[]{superHeltNavn};
-
+        superheroes = new Superhero[5];
+        antalSuperHeros = 0;
+        superherosAmount = 0;
+    }
+    public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, int superHelteStyrke){
+        Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
+        superheroes[antalSuperHeros++] = superhero;
+        superheroes[antalSuperHeros++] = superhero;
     }
 
-
-    public Superhero[] getSuperheroes() {
-        return superheroes;
+    public int getSuperherosAmount() {
+        return superherosAmount;
     }
 
-
+    public int getAntalSuperHeros(){
+        return antalSuperHeros;
+    }
 }
