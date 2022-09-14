@@ -22,9 +22,6 @@ public class Database {
         }
     }
 
-
-
-
     public Superhero searchFor(String searchFor){
         Superhero fundet = null;
         for (Superhero superhero : superheroes){
