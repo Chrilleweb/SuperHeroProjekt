@@ -6,6 +6,7 @@ public class Superhero {
     private String erMenneske;
     private double superHelteStyrke;
     private int opretEllerAfslut;
+    private String searchFor;
 
 
     public Superhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
@@ -15,15 +16,6 @@ public class Superhero {
         this.oprindelsesOr = oprindelsesOr;
         this.erMenneske = erMenneske;
         this.superHelteStyrke = superHelteStyrke;
-    }
-
-    public Superhero(){
-        this.superHeltNavn = "noname";
-        this.superKraft = "noname";
-        this.superHeltensRigtigeNavn = "noname";
-        this.oprindelsesOr = 0;
-        this.erMenneske = "nej";
-        this.superHelteStyrke = 0;
     }
 
     public String getSuperHeltNavn(){

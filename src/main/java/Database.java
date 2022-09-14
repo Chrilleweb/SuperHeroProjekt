@@ -22,6 +22,17 @@ public class Database {
         }
     }
 
+    public Superhero searchFor(String searchFor){
+        Superhero fundet = null;
+        for (Superhero superhero : superheroes){
+            if (superhero.getSuperHeltNavn().contains(searchFor)){
+                fundet = superhero;
+                System.out.println(fundet);
+            }
+        }
+        return fundet;
+    }
+
     public int getAntalSuperHeros(){
         return antalSuperHeros;
     }

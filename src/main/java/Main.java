@@ -9,17 +9,19 @@ public class Main {
         System.out.println("-------------------------");
         Scanner scan = new Scanner(System.in);
         int opretEllerAfslut;
-        String superHeltNavn = "No name";
-        String superKraft = "No power";
-        String superHeltensRigtigeNavn = "No real name";
-        int oprindelsesOr = 0;
-        String erMenneske = "nej";
-        double superHelteStyrke = 0;
+        String superHeltNavn;
+        String superKraft;
+        String superHeltensRigtigeNavn;
+        int oprindelsesOr;
+        String erMenneske;
+        double superHelteStyrke;
+        String searchFor;
         do {
 
         System.out.println("1. Opret superhelt");
         System.out.println("2. Afslut");
         System.out.println("3. Se liste af superhelte");
+        System.out.println("4. Søg efter superhelt");
         opretEllerAfslut = scan.nextInt();
         scan.nextLine();
 
@@ -48,6 +50,10 @@ public class Main {
             } if (opretEllerAfslut == 3){
                 System.out.println("Liste af superhelte:");
                  database.displaySuperheros();
+            } if (opretEllerAfslut == 4){
+                System.out.println("Hvilken superhelt vil du finde?");
+                searchFor = scan.nextLine();
+                database.searchFor(searchFor);
             }
 
 
