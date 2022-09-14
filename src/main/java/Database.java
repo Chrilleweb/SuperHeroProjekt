@@ -22,19 +22,12 @@ public class Database {
         }
     }
 
-    public void seacrhForName2(){
+    public void searchForName2(String searchForName){
         for (Superhero superhero : superheroes){
-            superhero.getSuperHeltNavn();
-            System.out.println(superhero);
+            if (superhero.getSuperHeltNavn().contains(searchForName))
+            System.out.println(superhero.getSuperHeltNavn());
             System.out.println();
         }
-    }
-
-    public String searchForName(String searchFor){
-        for (Superhero superhero : superheroes){
-            return superhero.getSuperHeltNavn();
-        }
-        return null;
     }
 
     public Superhero searchFor(String searchFor){

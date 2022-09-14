@@ -55,7 +55,7 @@ public class Main {
                 System.out.println("Hvilken superhelt vil du finde?");
                 searchForName = scan.nextLine();
                 System.out.println("Liste af superhelte der har " + searchForName + " i navnet:");
-                System.out.println(database.searchForName(searchForName));
+                database.searchForName2(searchForName);
                 System.out.println();
                 System.out.println("Vælg en superhelt fra listen:");
                 searchFor = scan.nextLine();
