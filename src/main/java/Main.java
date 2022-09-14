@@ -23,6 +23,24 @@ public class Main {
         opretEllerAfslut = scan.nextInt();
         scan.nextLine();
 
+        if (opretEllerAfslut == 1){
+            System.out.println("Indtast superheltenavn");
+            superHeltNavn = scan.nextLine();
+            System.out.println("Indtast Superkraft");
+            superKraft = scan.nextLine();
+            System.out.println("Indtast superheltens rigtige navn");
+            superHeltensRigtigeNavn = scan.nextLine();
+            System.out.println("Indtast oprindelsesår");
+            oprindelsesOr = scan.nextInt();
+            scan.nextLine();
+
+            System.out.println("er din superhelt et menneske? (JA/NEJ)");
+            erMenneske = scan.nextLine();
+
+            System.out.println("Indtast superheltens styrke");
+            superHelteStyrke = scan.nextDouble();
+        }
+
             if (opretEllerAfslut == 2) {
                 System.out.println("Du har Afsluttet programmet");
                 System.exit(0);
@@ -30,27 +48,8 @@ public class Main {
                 System.out.println("Liste af superhelte:");
                  database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
                 System.out.println(System.lineSeparator());
-                 continue;
             }
 
-
-        System.out.println("Indtast superheltenavn");
-        superHeltNavn = scan.nextLine();
-        System.out.println("Indtast Superkraft");
-         superKraft = scan.nextLine();
-        System.out.println("Indtast superheltens rigtige navn");
-         superHeltensRigtigeNavn = scan.nextLine();
-        System.out.println("Indtast oprindelsesår");
-         oprindelsesOr = scan.nextInt();
-        scan.nextLine();
-
-
-        System.out.println("er din superhelt et menneske? (JA/NEJ)");
-         erMenneske = scan.nextLine();
-
-
-        System.out.println("Indtast superheltens styrke");
-         superHelteStyrke = scan.nextDouble();
 
 
         } while (opretEllerAfslut != 2);
