@@ -53,7 +53,7 @@ public class Main {
             } if (opretEllerAfslut == 4){
                 System.out.println("Hvilken superhelt vil du finde?");
                 searchFor = scan.nextLine();
-                database.searchFor(searchFor);
+                System.out.println(database.searchFor(searchFor));
             }
 
 
