@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Database {
-    ArrayList<String> superheroes = new ArrayList<String>();
+    ArrayList<Superhero> superheroes = new ArrayList<>();
     private int antalSuperHeros;
 
 
@@ -11,15 +11,22 @@ public class Database {
     }
     public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
-        System.out.println(superhero);
-        System.out.println("Antal superhelte: " + antalSuperHeros++);
+        superheroes.add(superhero);
+
+    }
+    // printer alle superhelte ud vi har lavet
+    public void displaySuperheros(){
+        for (Superhero superhero : superheroes){
+            System.out.println(superhero);
+            System.out.println();
+        }
     }
 
     public int getAntalSuperHeros(){
         return antalSuperHeros;
     }
 
-    public ArrayList<String> getSuperheros(){
+    public ArrayList<Superhero> getSuperheros(){
         return superheroes;
     }
 

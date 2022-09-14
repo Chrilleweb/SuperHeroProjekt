@@ -39,6 +39,7 @@ public class Main {
 
             System.out.println("Indtast superheltens styrke");
             superHelteStyrke = scan.nextDouble();
+            database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
         }
 
             if (opretEllerAfslut == 2) {
@@ -46,8 +47,7 @@ public class Main {
                 System.exit(0);
             } if (opretEllerAfslut == 3){
                 System.out.println("Liste af superhelte:");
-                 database.createSuperhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
-                System.out.println(System.lineSeparator());
+                 database.displaySuperheros();
             }
 
 
