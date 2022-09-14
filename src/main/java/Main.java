@@ -12,7 +12,25 @@ public class Main {
     double superHelteStyrke;
     String searchFor;
     String searchForName;
+    String userEdit;
+    String searchForNameEdit;
+    String selectEdit;
     Database database = new Database();
+
+    public void EditSuperhelt(){
+        System.out.println("Søg efter den superhelt du vil redigere:");
+        searchForNameEdit = scan.nextLine();
+        System.out.println("Superhelte:");
+        database.searchForName2(searchForNameEdit);
+        System.out.println();
+        System.out.println("Vælg en superhelt fra listen:");
+        userEdit = scan.nextLine();
+        System.out.println("Her er din superhelt:");
+        System.out.println(database.searchFor(userEdit));
+        System.out.println();
+        System.out.println("Hvad vil du gerne redigere?");
+        selectEdit = scan.nextLine();
+    }
 
     public void OpretNySuperhelt(){
             System.out.println("Indtast superheltenavn");
@@ -57,6 +75,7 @@ public class Main {
         System.out.println("2. Afslut");
         System.out.println("3. Se liste af superhelte");
         System.out.println("4. Søg efter superhelt");
+            System.out.println("5. Edit en superhelt");
         opretEllerAfslut = scan.nextInt();
         scan.nextLine();
 
@@ -70,6 +89,8 @@ public class Main {
                  database.displaySuperheros();
             } if (opretEllerAfslut == 4){
                 SearchForName();
+            } if (opretEllerAfslut == 5){
+            EditSuperhelt();
             }
 
         } while (opretEllerAfslut != 2);
@@ -77,8 +98,6 @@ public class Main {
 
     public void start() {
         indtastSuperHelt();
-        OpretNySuperhelt();
-        SearchForName();
     }
 
     public static void main(String[] args) {
