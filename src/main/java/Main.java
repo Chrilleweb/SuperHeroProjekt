@@ -16,6 +16,7 @@ public class Main {
         String erMenneske;
         double superHelteStyrke;
         String searchFor;
+        String searchForName;
         do {
 
         System.out.println("1. Opret superhelt");
@@ -52,8 +53,15 @@ public class Main {
                  database.displaySuperheros();
             } if (opretEllerAfslut == 4){
                 System.out.println("Hvilken superhelt vil du finde?");
+                searchForName = scan.nextLine();
+                System.out.println("Liste af superhelte der har " + searchForName + " i navnet:");
+                System.out.println(database.searchForName(searchForName));
+                System.out.println();
+                System.out.println("Vælg en superhelt fra listen:");
                 searchFor = scan.nextLine();
+                System.out.println("Her er din superhelt:");
                 System.out.println(database.searchFor(searchFor));
+                System.out.println();
             }
 
 
