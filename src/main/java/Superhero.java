@@ -22,7 +22,7 @@ public class Superhero {
         this.superKraft = "noname";
         this.superHeltensRigtigeNavn = "noname";
         this.oprindelsesOr = 0;
-        this.erMenneske = "noname";
+        this.erMenneske = "nej";
         this.superHelteStyrke = 0;
     }
 

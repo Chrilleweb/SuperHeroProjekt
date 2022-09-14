@@ -13,7 +13,7 @@ public class Main {
         String superKraft = "No power";
         String superHeltensRigtigeNavn = "No real name";
         int oprindelsesOr = 0;
-        String erMenneske = "NEJ";
+        String erMenneske = "nej";
         double superHelteStyrke = 0;
         do {
 
