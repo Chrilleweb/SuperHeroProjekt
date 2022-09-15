@@ -3,17 +3,18 @@ import java.util.ArrayList;
 public class Database {
     ArrayList<Superhero> superheroes = new ArrayList<>();
     private int antalSuperHeros;
+    private String superHeltNavn;
 
 
     public Database() {
         ArrayList<String> superheroes = new ArrayList<String>();
-        antalSuperHeros = 1;
+        antalSuperHeros = 5;
     }
     public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
         superheroes.add(superhero);
-
     }
+
     // printer alle superhelte ud vi har lavet
     public void displaySuperheros(){
         for (Superhero superhero : superheroes){
@@ -46,6 +47,13 @@ public class Database {
 
     public ArrayList<Superhero> getSuperheros(){
         return superheroes;
+    }
+
+    public String getSuperHeltNavn(){
+        return superHeltNavn;
+    }
+    public void setSuperHeltNavn(){
+        this.superHeltNavn = superHeltNavn;
     }
 
 

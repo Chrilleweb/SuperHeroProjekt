@@ -17,6 +17,43 @@ public class Main {
     String selectEdit;
     Database database = new Database();
 
+
+    public void EditSuperHeltNavn(){
+        System.out.println("Skriv superheltens nye navn:");
+        superHeltNavn = scan.nextLine();
+        database.getSuperheros().set(0, new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke));
+    }
+
+    public void EditSuperKraft(){
+        System.out.println("Skriv superheltens nye superkraft:");
+        superKraft = scan.nextLine();
+        database.getSuperheros().set(0, new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke));
+    }
+
+    public void EditSuperHeltensRigtigeNavn(){
+        System.out.println("Skriv superheltens nye rigtige navn:");
+        superHeltensRigtigeNavn = scan.nextLine();
+        database.getSuperheros().set(0, new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke));
+    }
+
+    public void EditOprindelsesOr(){
+        System.out.println("Skriv superheltens nye oprindelsesår:");
+        oprindelsesOr = scan.nextInt();
+        database.getSuperheros().set(0, new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke));
+    }
+
+    public void EditErMenneske(){
+        System.out.println("er superhelten menneske?:");
+        erMenneske = scan.nextLine();
+        database.getSuperheros().set(0, new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke));
+    }
+
+    public void EditSuperheltensStyrke(){
+        System.out.println("Skriv superheltens nye styrke:");
+        superHelteStyrke = scan.nextDouble();
+        database.getSuperheros().set(0, new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke));
+    }
+
     public void EditSuperhelt(){
         System.out.println("Søg efter den superhelt du vil redigere:");
         searchForNameEdit = scan.nextLine();
@@ -30,6 +67,19 @@ public class Main {
         System.out.println();
         System.out.println("Hvad vil du gerne redigere?");
         selectEdit = scan.nextLine();
+        if (selectEdit.equals("superheltenavn")){
+            EditSuperHeltNavn();
+        } if (selectEdit.equals("superkraft")){
+            EditSuperKraft();
+        } if (selectEdit.equals(("virkeligt navn"))){
+            EditSuperHeltensRigtigeNavn();
+        } if (selectEdit.equals("oprindelsesår")){
+            EditOprindelsesOr();
+        } if (selectEdit.equals("er menneske")){
+            EditErMenneske();
+        } if (selectEdit.equals("styrke")){
+            EditSuperheltensStyrke();
+        }
     }
 
     public void OpretNySuperhelt(){
