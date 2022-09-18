@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,6 +19,10 @@ public class Main {
     String selectEdit;
     Database database = new Database();
 
+
+    public void DeleteSuperhelt(){
+
+    }
 
     public void EditSuperHeltNavn(){
         System.out.println("Skriv superheltens nye navn:");
@@ -129,29 +135,34 @@ public class Main {
         System.out.println("Velkommen til programmet!");
         System.out.println("-------------------------");
         do {
-
         System.out.println("1. Opret superhelt");
         System.out.println("2. Afslut");
         System.out.println("3. Se liste af superhelte");
         System.out.println("4. Søg efter superhelt");
-            System.out.println("5. Edit en superhelt");
-        opretEllerAfslut = scan.nextInt();
-        scan.nextLine();
-
-        if (opretEllerAfslut == 1){
-            OpretNySuperhelt();
-        } if (opretEllerAfslut == 2) {
+        System.out.println("5. Edit en superhelt");
+        System.out.println("6. Delete en superhelt");
+        try {
+            opretEllerAfslut = scan.nextInt();
+            scan.nextLine();
+            if (opretEllerAfslut == 1){
+                OpretNySuperhelt();
+            } if (opretEllerAfslut == 2) {
                 System.out.println("Du har Afsluttet programmet");
                 System.exit(0);
             } if (opretEllerAfslut == 3){
                 System.out.println("Liste af superhelte:");
-                 database.displaySuperheros();
+                database.displaySuperheros();
             } if (opretEllerAfslut == 4){
                 SearchForName();
             } if (opretEllerAfslut == 5){
-            EditSuperhelt();
+                EditSuperhelt();
+            } if (opretEllerAfslut == 6){
+                DeleteSuperhelt();
             }
-
+        } catch (Exception e){
+            System.out.println("Du valgte ikke et tal, start programmet igen");
+            break;
+        }
         } while (opretEllerAfslut != 2);
     }
 
