@@ -126,9 +126,12 @@ public class Main {
             System.out.println("Vælg en superhelt fra listen:");
             searchFor = scan.nextLine();
             System.out.println("Her er din superhelt:");
-            System.out.println(database.searchFor(searchFor));
-            System.out.println();
-
+            if (database.searchFor(searchFor) == null){
+                System.out.println("");
+            } else {
+                System.out.println(database.searchFor(searchFor));
+                System.out.println();
+            }
     }
 
     public void indtastSuperHelt() {
