@@ -15,6 +15,7 @@ public class UserInterFace {
     String userEdit;
     String searchForNameEdit;
     String selectEdit;
+    boolean jn;
     Database database = new Database();
 
 
@@ -121,7 +122,18 @@ public class UserInterFace {
 
 
         System.out.println("er din superhelt et menneske? (JA/NEJ)");
-        erMenneske = scan.nextLine();
+        while (true){
+            erMenneske = scan.nextLine().trim().toLowerCase();
+            if (erMenneske.equals("ja")){
+                jn = true;
+                break;
+            } else if (erMenneske.equals("nej")) {
+                jn = false;
+                break;
+            } else {
+                System.out.println("Du skal skrive ja eller nej");
+            }
+        }
 
         System.out.println("Indtast superheltens styrke");
         while (!scan.hasNextDouble()) {
