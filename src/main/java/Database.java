@@ -26,7 +26,7 @@ public class Database {
     public void searchForName2(String searchForName){
         for (Superhero superhero : superheroes){
             if (superhero.getSuperHeltNavn().contains(searchForName))
-            System.out.println(superhero.getSuperHeltNavn());
+            System.out.println("Superhelt: " + superhero.getSuperHeltNavn());
             System.out.println();
         }
     }

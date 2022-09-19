@@ -151,7 +151,7 @@ public class UserInterFace {
         System.out.println("Liste af superhelte der har " + searchForName + " i navnet:");
         database.searchForName2(searchForName);
         System.out.println();
-        System.out.println("Vælg en superhelt fra listen:");
+        System.out.println("Du har " + database.superheroes.size() + " superhelt(e) at vælge imellem, vælg én");
         searchFor = scan.nextLine();
         System.out.println("Her er din superhelt:");
         if (database.searchFor(searchFor) == null) {
