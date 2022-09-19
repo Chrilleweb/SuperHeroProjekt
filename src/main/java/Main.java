@@ -75,8 +75,15 @@ public class Main {
         System.out.println("Vælg en superhelt fra listen:");
         userEdit = scan.nextLine();
         System.out.println("Her er din superhelt:");
-        System.out.println(database.searchFor(userEdit));
-        System.out.println();
+
+        if (database.searchFor(userEdit) == null){
+            System.out.println("Du har ingen superhelt med navnet " + userEdit);
+            indtastSuperHelt();
+        } else {
+            System.out.println(database.searchFor(userEdit));
+            System.out.println();
+        }
+
         System.out.println("Hvad vil du gerne redigere?");
         selectEdit = scan.nextLine();
         if (selectEdit.equals("superheltenavn")){
@@ -135,9 +142,9 @@ public class Main {
     }
 
     public void indtastSuperHelt() {
-        System.out.println("Velkommen til programmet!");
-        System.out.println("-------------------------");
+
         do {
+        System.out.println("-------------------------");
         System.out.println("1. Opret superhelt");
         System.out.println("2. Afslut");
         System.out.println("3. Se liste af superhelte");
@@ -170,6 +177,7 @@ public class Main {
     }
 
     public void start() {
+        System.out.println("Velkommen til programmet!");
         indtastSuperHelt();
     }
 
