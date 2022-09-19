@@ -25,8 +25,8 @@ public class Database {
 
     public void searchForName2(String searchForName){
         for (Superhero superhero : superheroes){
-            if (superhero.getSuperHeltNavn().contains(searchForName))
-            System.out.println("Superhelt: " + superhero.getSuperHeltNavn());
+            if (superhero.getSuperHeltNavn().trim().toLowerCase().contains(searchForName))
+            System.out.println("Superhelt: " + superhero.getSuperHeltNavn().substring(0, 1).toUpperCase() + superhero.getSuperHeltNavn().substring(1));
             System.out.println();
         }
     }
@@ -34,7 +34,7 @@ public class Database {
     public Superhero searchFor(String searchFor){
         Superhero fundet = null;
         for (Superhero superhero : superheroes){
-            if (superhero.getSuperHeltNavn().contains(searchFor)){
+            if (superhero.getSuperHeltNavn().toLowerCase().contains(searchFor)){
                 fundet = superhero;
             }
         }
