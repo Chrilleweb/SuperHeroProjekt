@@ -28,7 +28,11 @@ public class UserInterFace {
         System.out.println();
         System.out.println("Du har " + database.superheroes.size() + " superhelt(e) at vælge imellem, vælg én");
         searchFor = scan.nextLine();
-        System.out.println(database.searchFor(searchFor));
+        while(!searchFor.equals(superHeltNavn)){
+            System.out.println("Du skal skrive superheltens navn korrekt");
+            searchFor = scan.nextLine();
+        }
+
 
 
         System.out.println("Vil du slette denne superhelt? (JA/NEJ)");
