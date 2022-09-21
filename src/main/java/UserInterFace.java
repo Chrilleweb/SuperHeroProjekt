@@ -209,6 +209,11 @@ public class UserInterFace {
     }
 
     public void SearchForName() {
+        if (database.superheroes.size() == 0){
+            System.out.println("Du har desværre ingen superhelte at søge efter");
+            System.out.println("Du er blevet sendt tilbage til menuen");
+            indtastSuperHelt();
+        }
         System.out.println("Hvilken superhelt vil du finde?");
         searchForName = scan.nextLine();
         System.out.println("Liste af superhelte der har " + searchForName + " i navnet:");
