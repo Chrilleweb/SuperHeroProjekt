@@ -24,7 +24,33 @@ public class UserInterFace {
         System.out.println("Hvilken superhelt vil du gerne delete?");
         searchForName = scan.nextLine();
         System.out.println("Liste af superhelte der har " + searchForName + " i navnet:");
-        database.searchForName2(searchForName);
+
+        while (true){
+            database.searchForName2(searchForName);
+            if (database.superheroes.size() > 0){
+                break;
+            }
+            if (database.superheroes.size() == 0){
+                System.out.println("du har ingen superhelte, vil du oprette en ny superhelt? (JA/NEJ)");
+                deleteJaNej = scan.nextLine().trim().toLowerCase();
+                jn = false;
+                if (deleteJaNej.equals("ja")){
+                    OpretNySuperhelt();
+                    jn = false;
+                    indtastSuperHelt();
+                    break;
+                } if (deleteJaNej.equals("nej")){
+                    System.out.println("Du har svaret nej, du bliver sendt tilbage til menuen");
+                    indtastSuperHelt();
+                    jn = false;
+                    break;
+                } else {
+                    System.out.println("du skal svare JA/NEj");
+                    jn = false;
+                }
+            }
+        }
+
         System.out.println();
         System.out.println("Du har " + database.superheroes.size() + " superhelt(e) at vælge imellem, vælg én");
         searchFor = scan.nextLine();
