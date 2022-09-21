@@ -50,6 +50,10 @@ public class UserInterFace {
                 }
             }
         }
+        if (!searchForName.equals(database.getSuperHeltNavn())){
+            System.out.println("Du har ingen superhelte med " + searchForName + " i navnet, du bliver sendt tilbage til menuen");
+            indtastSuperHelt();
+        }
 
         System.out.println();
         System.out.println("Du har " + database.superheroes.size() + " superhelt(e) at vælge imellem, vælg én");
