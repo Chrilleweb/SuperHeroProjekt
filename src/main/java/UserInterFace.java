@@ -51,6 +51,7 @@ public class UserInterFace {
             }
         }
 
+
         System.out.println();
         System.out.println("Du har " + database.superheroes.size() + " superhelt(e) at vælge imellem, vælg én");
         searchFor = scan.nextLine();
@@ -124,6 +125,12 @@ public class UserInterFace {
     public void EditSuperhelt() {
         System.out.println("Søg efter den superhelt du vil redigere:");
         searchForNameEdit = scan.nextLine();
+
+        if (database.superheroes.size() == 0){
+            System.out.println("Du har ingen superhelte at redigere, du bliver sendt tilbage til menuen");
+            indtastSuperHelt();
+        }
+
         System.out.println("Superhelte:");
         database.searchForName2(searchForNameEdit);
         System.out.println();
