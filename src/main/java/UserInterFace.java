@@ -16,11 +16,37 @@ public class UserInterFace {
     String searchForNameEdit;
     String selectEdit;
     boolean jn;
+    String deleteJaNej;
     Database database = new Database();
 
 
     public void DeleteSuperhelt() {
+        System.out.println("Hvilken superhelt vil du gerne delete?");
+        searchForName = scan.nextLine();
+        System.out.println("Liste af superhelte der har " + searchForName + " i navnet:");
+        database.searchForName2(searchForName);
+        System.out.println();
+        System.out.println("Du har " + database.superheroes.size() + " superhelt(e) at vælge imellem, vælg én");
+        searchFor = scan.nextLine();
+        System.out.println(database.searchFor(searchFor));
 
+
+        System.out.println("Vil du slette denne superhelt? (JA/NEJ)");
+        while (true){
+            deleteJaNej = scan.nextLine().trim().toLowerCase();
+            if (deleteJaNej.equals("ja")){
+                jn = true;
+                database.superheroes.remove(database.searchFor(searchFor));
+                System.out.println("Superhelten: " + searchFor + " blev slettet fra databasen");
+                break;
+            } else if (deleteJaNej.equals("nej")) {
+                jn = false;
+                System.out.println("Din superhelt er ikke blevet slettet");
+                break;
+            } else {
+                System.out.println("du skal svare JA/NEJ");
+            }
+        }
     }
 
     public void EditSuperHeltNavn() {

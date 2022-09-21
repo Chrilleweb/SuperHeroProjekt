@@ -23,6 +23,16 @@ public class Database {
         }
     }
 
+    public Superhero deleteSuperhero(String searchForName){
+        Superhero delete = null;
+        for (Superhero superhero : superheroes){
+            if (superhero.equals(searchForName)){
+                delete = superhero;
+            }
+        }
+        return delete;
+    }
+
     public void searchForName2(String searchForName){
         for (Superhero superhero : superheroes){
             if (superhero.getSuperHeltNavn().trim().toLowerCase().contains(searchForName))
