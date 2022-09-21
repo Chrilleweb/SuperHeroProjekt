@@ -23,20 +23,10 @@ public class Database {
         }
     }
 
-    public Superhero deleteSuperhero(String searchForName){
-        Superhero delete = null;
-        for (Superhero superhero : superheroes){
-            if (superhero.equals(searchForName)){
-                delete = superhero;
-            }
-        }
-        return delete;
-    }
-
     public void searchForName2(String searchForName){
         for (Superhero superhero : superheroes){
             if (superhero.getSuperHeltNavn().trim().toLowerCase().contains(searchForName))
-            System.out.println("Superhelt: " + superhero.getSuperHeltNavn().substring(0, 1).toUpperCase() + superhero.getSuperHeltNavn().substring(1));
+                System.out.println("Superhelt: " + superhero.getSuperHeltNavn().substring(0, 1).toUpperCase() + superhero.getSuperHeltNavn().substring(1));
             System.out.println();
         }
     }

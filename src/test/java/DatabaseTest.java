@@ -37,5 +37,10 @@ class DatabaseTest {
         assertEquals(expected, data);
     }
 
+    @Test
+    void displaySuperhelte(){
+        displaySuperhelte();
+    }
+
 
 }

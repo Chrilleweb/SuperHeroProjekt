@@ -32,14 +32,14 @@ public class UserInterFace {
             }
             if (database.superheroes.size() == 0){
                 System.out.println("du har ingen superhelte, vil du oprette en ny superhelt? (JA/NEJ)");
-                deleteJaNej = scan.nextLine().trim().toLowerCase();
+                searchForName = scan.nextLine().trim().toLowerCase();
                 jn = false;
-                if (deleteJaNej.equals("ja")){
+                if (searchForName.equals("ja")){
                     OpretNySuperhelt();
                     jn = false;
                     indtastSuperHelt();
                     break;
-                } if (deleteJaNej.equals("nej")){
+                } if (searchForName.equals("nej")){
                     System.out.println("Du har svaret nej, du bliver sendt tilbage til menuen");
                     indtastSuperHelt();
                     jn = false;
@@ -49,10 +49,6 @@ public class UserInterFace {
                     jn = false;
                 }
             }
-        }
-        if (!searchForName.equals(database.getSuperHeltNavn())){
-            System.out.println("Du har ingen superhelte med " + searchForName + " i navnet, du bliver sendt tilbage til menuen");
-            indtastSuperHelt();
         }
 
         System.out.println();
