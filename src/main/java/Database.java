@@ -2,13 +2,11 @@ import java.util.ArrayList;
 
 public class Database {
     ArrayList<Superhero> superheroes = new ArrayList<>();
-    private int antalSuperHeros;
     private String superHeltNavn;
 
 
     public Database() {
         ArrayList<String> superheroes = new ArrayList<String>();
-        antalSuperHeros = 5;
     }
     public void createSuperhero(String superHeltNavn, String superKraft, String superHeltensRigtigeNavn, int oprindelsesOr, String erMenneske, double superHelteStyrke){
         Superhero superhero = new Superhero(superHeltNavn, superKraft, superHeltensRigtigeNavn, oprindelsesOr, erMenneske, superHelteStyrke);
@@ -39,10 +37,6 @@ public class Database {
             }
         }
         return fundet;
-    }
-
-    public int getAntalSuperHeros(){
-        return antalSuperHeros;
     }
 
     public ArrayList<Superhero> getSuperheros(){
